@@ -19,7 +19,7 @@ endif()
 #------------------------------------------------------------------------------
 # SCHEME_FILES
 #------------------------------------------------------------------------------
-set(SCHEME_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}/ccpp/physics/physics")
+set(SCHEME_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}/physics/physics")
 set(SCHEME_METADATA_FILES
   # time-vary
   "${SCHEME_FILES_DIR}/Interstitials/UFS_SCM_NEPTUNE/GFS_rrtmg_setup.meta"
@@ -162,7 +162,7 @@ ccpp_source_files(SCHEME_FORTRAN_FILES ${SCHEME_METADATA_FILES})
 #------------------------------------------------------------------------------
 # HOST_FILES
 #------------------------------------------------------------------------------
-set(HOST_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}/ccpp")
+set(HOST_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}")
 set(HOST_METADATA_FILES
    "${HOST_FILES_DIR}/data/CCPP_typedefs.meta"
    "${HOST_FILES_DIR}/data/GFS_typedefs.meta"
@@ -192,7 +192,7 @@ endif()
 #------------------------------------------------------------------------------
 # SUITE_FILES
 #------------------------------------------------------------------------------
-set(SUITE_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}/ccpp/suites")
+set(SUITE_FILES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${PARENT_DIR}/suites")
 if(DEFINED CCPP_SUITES)
   # Take comma seperated string containing SDF names <CCPP_SUITES>,
   # append <SUITE_FILES_DIR> as file prefix, append ".xml" file suffix,
