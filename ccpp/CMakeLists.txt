@@ -4,6 +4,11 @@ project(CCPP-UFS
         LANGUAGES C CXX Fortran)
 set(PROJECT "CCPP-UFS")
 
+if (NOT DEFINED PARENT_DIR)
+  set(PARENT_DIR "")
+  message(STATUS "PARENT_DIR not set; defaulting to empty string")
+endif()
+
 #------------------------------------------------------------------------------
 #
 # Create list of SCHEME_FILES, HOST_FILES, and SUITE_FILES.
